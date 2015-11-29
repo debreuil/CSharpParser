@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Referenced Assemblies", "Referenced Assemblies", "{14A8CCD6-7EF8-46D2-B9C1-C2760203DFD6}"
+	ProjectSection(SolutionItems) = preProject
+		Referenced Assemblies\DotNetZen.CodeDom.dll = Referenced Assemblies\DotNetZen.CodeDom.dll
+		Referenced Assemblies\DotNetZen.CodeDom.Patterns.dll = Referenced Assemblies\DotNetZen.CodeDom.Patterns.dll
+		Referenced Assemblies\DotNetZen.CodeDom.Patterns.XML = Referenced Assemblies\DotNetZen.CodeDom.Patterns.XML
+		Referenced Assemblies\DotNetZen.CodeDom.xml = Referenced Assemblies\DotNetZen.CodeDom.xml
+		Referenced Assemblies\nunit.framework.dll = Referenced Assemblies\nunit.framework.dll
+		Referenced Assemblies\nunit.framework.xml = Referenced Assemblies\nunit.framework.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMicroParser", "CSLexer\CMicroParser.csproj", "{54B6D13E-6D0E-405D-9B2D-1C69721F476D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test program\Test.csproj", "{3985731E-302A-475A-8953-8DDBC3043969}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54B6D13E-6D0E-405D-9B2D-1C69721F476D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B6D13E-6D0E-405D-9B2D-1C69721F476D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B6D13E-6D0E-405D-9B2D-1C69721F476D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B6D13E-6D0E-405D-9B2D-1C69721F476D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3985731E-302A-475A-8953-8DDBC3043969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3985731E-302A-475A-8953-8DDBC3043969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3985731E-302A-475A-8953-8DDBC3043969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3985731E-302A-475A-8953-8DDBC3043969}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs01.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CSLexer\\CMicroParser.csproj
+		SccProjectName1 = CSLexer
+		SccLocalPath1 = CSLexer
+		SccProjectUniqueName2 = Test\u0020program\\Test.csproj
+		SccProjectName2 = Test\u0020program
+		SccLocalPath2 = Test\u0020program
+	EndGlobalSection
+EndGlobal

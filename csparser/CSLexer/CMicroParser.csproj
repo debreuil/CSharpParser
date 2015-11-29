@@ -1,0 +1,303 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{54B6D13E-6D0E-405D-9B2D-1C69721F476D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>CMicroParser</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DDW</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZen.CodeDom, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced Assemblies\DotNetZen.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZen.CodeDom.Patterns, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Referenced Assemblies\DotNetZen.CodeDom.Patterns.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Builders\CodeBuilder.cs" />
+    <Compile Include="Builders\CSharpBuilder.cs" />
+    <Compile Include="Collections\ConstraintCollection.cs" />
+    <Compile Include="Collections\ConstraintExpressionCollection.cs" />
+    <Compile Include="Collections\PartialCollection.cs" />
+    <Compile Include="Collections\TypeCollection.cs" />
+    <Compile Include="Collections\TypeParameterCollection.cs" />
+    <Compile Include="Collections\NodeCollection.cs" />
+    <Compile Include="Collections\ParseStateCollection.cs" />
+    <Compile Include="Collections\TokenCollection.cs" />
+    <Compile Include="Enums\NameVisibilityRestriction.cs" />
+    <Compile Include="Enums\PropertyAccessors.cs" />
+    <Compile Include="Enums\Scope.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="GraphVisitor\AbstractVisitor.cs" />
+    <Compile Include="GraphVisitor\CSharpVisitor.cs" />
+    <Compile Include="Lexer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums\Modifier.cs" />
+    <Compile Include="Names\ClassName.cs" />
+    <Compile Include="Names\Context.cs" />
+    <Compile Include="Names\DelegateName.cs" />
+    <Compile Include="Names\EnumName.cs" />
+    <Compile Include="Names\EventName.cs" />
+    <Compile Include="Names\FieldName.cs" />
+    <Compile Include="Names\IndexerName.cs" />
+    <Compile Include="Names\MethodName.cs" />
+    <Compile Include="Names\OperatorName.cs" />
+    <Compile Include="Names\PropertyName.cs" />
+    <Compile Include="Names\StructName.cs" />
+    <Compile Include="Names\InterfaceName.cs" />
+    <Compile Include="Names\IdentifierName.cs" />
+    <Compile Include="Names\NameResolutionTable.cs" />
+    <Compile Include="Names\NamespaceName.cs" />
+    <Compile Include="Names\TypeMemberName.cs" />
+    <Compile Include="Names\TypeName.cs" />
+    <Compile Include="Nodes\Expressions\AnonymousMethodNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Expressions\BinaryExpression.cs" />
+    <Compile Include="Nodes\Expressions\DereferenceExpression.cs" />
+    <Compile Include="Nodes\Expressions\StackallocExpression.cs" />
+    <Compile Include="Nodes\Expressions\SizeOfExpression.cs" />
+    <Compile Include="Nodes\Expressions\AddressOfExpressionExpression.cs" />
+    <Compile Include="Nodes\Expressions\QualifiedIdentifierExpression.cs" />
+    <Compile Include="Nodes\Expressions\TypePointerNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Generic\ConstraintExpressionNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Generic\ConstraintNode.cs" />
+    <Compile Include="Nodes\Generic\ConstructorConstraintNode.cs" />
+    <Compile Include="Nodes\Generic\DefaultConstantExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Generic\GenericNode.cs" />
+    <Compile Include="Nodes\Generic\TypeParameterNode.cs" />
+    <Compile Include="Nodes\Identified Nodes\IdentifiedTypeNode.cs" />
+    <Compile Include="Nodes\Interfaces\INullableType.cs" />
+    <Compile Include="Nodes\Interfaces\IIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Interfaces\IPartial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Interfaces\IPointer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Interfaces\IUnsafe.cs" />
+    <Compile Include="Nodes\Interfaces\IGeneric.cs" />
+    <Compile Include="Nodes\Members\AccessorNode.cs" />
+    <Compile Include="Nodes\Expressions\ArgumentNode.cs" />
+    <Compile Include="Nodes\Members\DestructorNode.cs" />
+    <Compile Include="Nodes\Members\FixedBufferNode.cs" />
+    <Compile Include="Nodes\PreprocessorNodes\PPPragmaNode.cs" />
+    <Compile Include="Nodes\Statements\CommentStatement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Statements\FixedLocalDeclarationStatement.cs" />
+    <Compile Include="Nodes\Statements\FixedStatement.cs" />
+    <Compile Include="Nodes\Statements\YieldStatement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Structural\AttributeArgumentNode.cs" />
+    <Compile Include="Nodes\Structural\AttributeNode.cs" />
+    <Compile Include="Nodes\BaseNode.cs" />
+    <Compile Include="Nodes\Statements\BlockStatement.cs" />
+    <Compile Include="Nodes\Structural\ExternAliasDirectiveNode.cs" />
+    <Compile Include="Nodes\Types\ConstructedTypeNode.cs" />
+    <Compile Include="Nodes\Types\ClassNode.cs" />
+    <Compile Include="Nodes\Structural\CompilationUnitNode.cs" />
+    <Compile Include="Nodes\Expressions\ConstantExpression.cs" />
+    <Compile Include="Nodes\Members\ConstantNode.cs" />
+    <Compile Include="Nodes\Members\ConstructorNode.cs" />
+    <Compile Include="Nodes\Types\DelegateNode.cs" />
+    <Compile Include="Collections\ExpressionList.cs" />
+    <Compile Include="Nodes\Statements\ExpressionStatement.cs" />
+    <Compile Include="Nodes\Expressions\ArrayCreationExpression.cs" />
+    <Compile Include="Nodes\Expressions\ArrayInitializerExpression.cs" />
+    <Compile Include="Nodes\Expressions\AssignmentExpression.cs" />
+    <Compile Include="Nodes\Expressions\BaseAccessExpression.cs" />
+    <Compile Include="Nodes\Expressions\CheckedExpression.cs" />
+    <Compile Include="Nodes\Expressions\ConditionalExpression.cs" />
+    <Compile Include="Nodes\Expressions\DelegateCreationExpression.cs" />
+    <Compile Include="Nodes\Expressions\ElementAccessExpression.cs" />
+    <Compile Include="Nodes\Types\EnumNode.cs" />
+    <Compile Include="Nodes\Expressions\IdentifierExpression.cs" />
+    <Compile Include="Nodes\Expressions\InvocationExpression.cs" />
+    <Compile Include="Nodes\Interfaces\IType.cs" />
+    <Compile Include="Nodes\Statements\LocalDeclarationStatement.cs" />
+    <Compile Include="Nodes\Expressions\MemberAccessExpression.cs" />
+    <Compile Include="Nodes\Expressions\ObjectCreationExpression.cs" />
+    <Compile Include="Nodes\Expressions\OutNode.cs" />
+    <Compile Include="Nodes\Expressions\ParenthesizedExpression.cs" />
+    <Compile Include="Nodes\Expressions\PostDecrementExpression.cs" />
+    <Compile Include="Nodes\Expressions\PostIncrementExpression.cs" />
+    <Compile Include="Nodes\Expressions\PrimaryExpression.cs" />
+    <Compile Include="Nodes\Expressions\RefNode.cs" />
+    <Compile Include="Nodes\Expressions\ThisAccessExpression.cs" />
+    <Compile Include="Nodes\Expressions\TypeNode.cs" />
+    <Compile Include="Nodes\Expressions\TypeOfExpression.cs" />
+    <Compile Include="Nodes\Expressions\UnaryCastExpression.cs" />
+    <Compile Include="Nodes\Expressions\UnaryExpression.cs" />
+    <Compile Include="Nodes\Expressions\UncheckedExpression.cs" />
+    <Compile Include="Nodes\Members\InterfaceEventNode.cs" />
+    <Compile Include="Nodes\Members\InterfaceIndexerNode.cs" />
+    <Compile Include="Nodes\Members\InterfaceMethodNode.cs" />
+    <Compile Include="Nodes\Types\InterfaceNode.cs" />
+    <Compile Include="Nodes\Members\InterfacePropertyNode.cs" />
+    <Compile Include="Nodes\PreprocessorNodes\PPDefineNode.cs" />
+    <Compile Include="Nodes\PreprocessorNodes\PPEndIfNode.cs" />
+    <Compile Include="Nodes\PreprocessorNodes\PPIfNode.cs" />
+    <Compile Include="Nodes\PreprocessorNodes\PPNode.cs" />
+    <Compile Include="Nodes\Expressions\PrimitiveExpressions\BooleanPrimitive.cs" />
+    <Compile Include="Nodes\Expressions\PrimitiveExpressions\CharPrimitive.cs" />
+    <Compile Include="Nodes\Expressions\PrimitiveExpressions\DecimalPrimitive.cs" />
+    <Compile Include="Nodes\Expressions\PrimitiveExpressions\IntegralPrimitive.cs" />
+    <Compile Include="Enums\IntegralType.cs" />
+    <Compile Include="Nodes\Expressions\PrimitiveExpressions\LiteralNode.cs" />
+    <Compile Include="Nodes\Expressions\PrimitiveExpressions\NullPrimitive.cs" />
+    <Compile Include="Nodes\Expressions\PredefinedTypeNode.cs" />
+    <Compile Include="Nodes\Expressions\PrimitiveExpressions\RealPrimitive.cs" />
+    <Compile Include="Nodes\Expressions\PrimitiveExpressions\StringPrimitive.cs" />
+    <Compile Include="Nodes\Expressions\PrimitiveExpressions\VoidPrimitive.cs" />
+    <Compile Include="Nodes\Interfaces\ISourceCode.cs" />
+    <Compile Include="Nodes\Statements\BreakStatement.cs" />
+    <Compile Include="Nodes\Statements\ContinueStatement.cs" />
+    <Compile Include="Nodes\Statements\CaseNode.cs" />
+    <Compile Include="Nodes\Statements\LabeledStatement.cs" />
+    <Compile Include="Nodes\Statements\SwitchStatement.cs" />
+    <Compile Include="Nodes\Statements\UsingStatement.cs" />
+    <Compile Include="Nodes\Statements\LockStatement.cs" />
+    <Compile Include="Nodes\Statements\UncheckedStatement.cs" />
+    <Compile Include="Nodes\Statements\TryStatement.cs" />
+    <Compile Include="Nodes\Statements\FinallyNode.cs" />
+    <Compile Include="Nodes\Statements\CheckedStatement.cs" />
+    <Compile Include="Nodes\Statements\CatchNode.cs" />
+    <Compile Include="Nodes\Statements\ThrowNode.cs" />
+    <Compile Include="Nodes\Statements\ReturnStatement.cs" />
+    <Compile Include="Nodes\Statements\GotoStatement.cs" />
+    <Compile Include="Nodes\Statements\ForEachStatement.cs" />
+    <Compile Include="Nodes\Statements\DoStatement.cs" />
+    <Compile Include="Nodes\Statements\ForStatement.cs" />
+    <Compile Include="Nodes\Statements\WhileStatement.cs" />
+    <Compile Include="Nodes\Expressions\ExpressionNode.cs" />
+    <Compile Include="Nodes\Members\FieldNode.cs" />
+    <Compile Include="Nodes\Members\IndexerNode.cs" />
+    <Compile Include="Nodes\Statements\IfStatement.cs" />
+    <Compile Include="Nodes\Members\MemberNode.cs" />
+    <Compile Include="Nodes\Members\MethodNode.cs" />
+    <Compile Include="Nodes\Members\EventNode.cs" />
+    <Compile Include="Nodes\Structural\NamespaceNode.cs" />
+    <Compile Include="Nodes\Members\OperatorNode.cs" />
+    <Compile Include="Nodes\Members\ParamDeclNode.cs" />
+    <Compile Include="Nodes\Members\PropertyNode.cs" />
+    <Compile Include="Nodes\Statements\StatementNode.cs" />
+    <Compile Include="Nodes\Types\StructNode.cs" />
+    <Compile Include="Nodes\Structural\UsingDirectiveNode.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Enums\ParseState.cs" />
+    <Compile Include="Enums\PreprocessorID.cs" />
+    <Compile Include="ParserRunner.cs" />
+    <Compile Include="Resolver.cs" />
+    <Compile Include="Token.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums\TokenID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

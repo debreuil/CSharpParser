@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetZen.CodeDom</name>
+    </assembly>
+    <members>
+        <member name="T:DotNetZen.CodeDom.CodeInstanceReferenceExpression">
+            <summary>
+            Represents a reference to an instance with the indication of whether it's a reference or a value type.
+            </summary>
+        </member>
+        <member name="M:DotNetZen.CodeDom.CodeInstanceReferenceExpression.#ctor(System.CodeDom.CodeExpression,DotNetZen.CodeDom.ResourceType)">
+            <summary>
+            Initializes a new instance of the CodeInstanceReferenceExpression class.
+            </summary>
+            <param name="instance">The expression representing the instance.</param>
+            <param name="objectType">The type of the object (reference/value).</param>
+        </member>
+        <member name="M:DotNetZen.CodeDom.CodeInstanceReferenceExpression.#ctor(System.CodeDom.CodeExpression,System.Type)">
+            <summary>
+            Initializes a new instance of the CodeInstanceReferenceExpression class.
+            </summary>
+            <param name="instance">The expression representing the instance.</param>
+            <param name="objectType">The <see cref="T:System.Type"/> of the object.</param>
+        </member>
+        <member name="P:DotNetZen.CodeDom.CodeInstanceReferenceExpression.Instance">
+            <summary>
+            The expression representing the instance.
+            </summary>
+        </member>
+        <member name="P:DotNetZen.CodeDom.CodeInstanceReferenceExpression.ObjectType">
+            <summary>
+            The type of the instance.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.CodeTypeReferenceStore">
+            <summary>
+            Acts as a cache for <see cref="T:System.CodeDom.CodeTypeReference"/> objects.
+            </summary>
+        </member>
+        <member name="M:DotNetZen.CodeDom.CodeTypeReferenceStore.Get(System.Type)">
+            <summary>
+            Gets a <see cref="T:System.CodeDom.CodeTypeReference"/> by the <see cref="T:System.Type"/> it should reference.
+            </summary>
+            <param name="type">The type being referenced.</param>
+            <returns>A <see cref="T:System.CodeDom.CodeTypeReference"/> object.</returns>
+        </member>
+        <member name="M:DotNetZen.CodeDom.CodeTypeReferenceStore.Get(System.String)">
+            <summary>
+            Gets a <see cref="T:System.CodeDom.CodeTypeReference"/> by the name of the <see cref="T:System.Type"/> it should reference.
+            </summary>
+            <param name="typeName">The name of the type being referenced.</param>
+            <returns>A <see cref="T:System.CodeDom.CodeTypeReference"/> object.</returns>
+        </member>
+        <member name="T:DotNetZen.CodeDom.Scope">
+            <summary>
+            Designates the scope of a code element.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.Scope.Static">
+            <summary>
+            The element is defined on the type.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.Scope.Instance">
+            <summary>
+            The element is defined on an instance.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.ResourceType">
+            <summary>
+            Designates the type category of a resource in the using and disposable type patterns.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.ResourceType.ReferenceType">
+            <summary>
+            The resource is a reference type.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.ResourceType.ValueType">
+            <summary>
+            The resource is a value type.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.LoadType">
+            <summary>
+            Designates the object's load type in the singleton pattern.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.LoadType.LazyLoad">
+            <summary>
+            The singleton object will load on first call.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.LoadType.PreLoad">
+            <summary>
+            The singleton object will load on first type reference.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.CodePatternUnaryOperatorType">
+            <summary>
+            Designates unary operators.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternUnaryOperatorType.BooleanNot">
+            <summary>
+            Boolean not (== false) operator.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternUnaryOperatorType.BooleanIsTrue">
+            <summary>
+            Boolean is (== true) operator.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternUnaryOperatorType.BooleanIsNull">
+            <summary>
+            Boolean is null (== null) operator.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternUnaryOperatorType.BooleanNotNull">
+            <summary>
+            Boolean is not null (!= null) operator.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.CodePatternBinaryOperatorType">
+            <summary>
+            Designates binary operators.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternBinaryOperatorType.BooleanExclusiveOr">
+            <summary>
+            Boolean exclusive or (xor) operator.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.CodePatternCompoundAssignmentOperatorType">
+            <summary>
+            Designates compound assignment operators.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternCompoundAssignmentOperatorType.Add">
+            <summary>
+            Addition operator.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternCompoundAssignmentOperatorType.Subtract">
+            <summary>
+            Subtraction operator.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternCompoundAssignmentOperatorType.Multiply">
+            <summary>
+            Multiplication operator.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternCompoundAssignmentOperatorType.Divide">
+            <summary>
+            Division operator.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternCompoundAssignmentOperatorType.Modulus">
+            <summary>
+            Modulus operator.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternCompoundAssignmentOperatorType.BitwiseAnd">
+            <summary>
+            Bitwise and operator.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CodePatternCompoundAssignmentOperatorType.BitwiseOr">
+            <summary>
+            Bitwise or operator.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.CollectionEvents">
+            <summary>
+            Designates types of events in a collection.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.None">
+            <summary>
+            No events.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.Clearing">
+            <summary>
+            Pre-Clearing event.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.Cleared">
+            <summary>
+            Post-Clearing event.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.ClearEvents">
+            <summary>
+            Both the Clearing and Cleared events.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.Inserting">
+            <summary>
+            Pre-Inserting event.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.Inserted">
+            <summary>
+            Post-Inserting event.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.InsertionEvents">
+            <summary>
+            Both the Inserting and Inserted events.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.Removing">
+            <summary>
+            Pre-Removing event.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.Removed">
+            <summary>
+            Post-Removing event.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.RemovalEvents">
+            <summary>
+            Both the Removing and Removed events.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.Setting">
+            <summary>
+            Pre-Setting event.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.Set">
+            <summary>
+            Post-Setting event.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.SettingEvents">
+            <summary>
+            Both the Setting and Set events.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.Validating">
+            <summary>
+            Validation event.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.PreEvents">
+            <summary>
+            Pre-Action events.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.PostEvents">
+            <summary>
+            Post-Action events.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.CollectionEvents.All">
+            <summary>
+            All events that can be exposed by a collection.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.InterfaceImplementationType">
+            <summary>
+            Designates types of interface implementation.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.InterfaceImplementationType.Implicit">
+            <summary>
+            Implicit implementation of an interface.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.InterfaceImplementationType.Explicit">
+            <summary>
+            Explicit implementation of an interface.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.XmlCommentListType">
+            <summary>
+            Designates types of xml comment list types.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.XmlCommentListType.Default">
+            <summary>
+            The default list type (depends on the documentation generator).
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.XmlCommentListType.Bullets">
+            <summary>
+            Bulleted list.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.XmlCommentListType.Numbered">
+            <summary>
+            Numbered list.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.XmlCommentListType.Table">
+            <summary>
+            A table of either one or two columns.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.PropertyAccessors">
+            <summary>
+            Designates accessors of a property.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.PropertyAccessors.Get">
+            <summary>
+            Only the get accessor.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.PropertyAccessors.Set">
+            <summary>
+            Only the set accessor.
+            </summary>
+        </member>
+        <member name="F:DotNetZen.CodeDom.PropertyAccessors.Both">
+            <summary>
+            Both get and set accessor.
+            </summary>
+        </member>
+        <member name="T:DotNetZen.CodeDom.ReflectionUtilities">
+            <summary>
+            Provides utilities to create CodeDOM objects from runtime objects.
+            </summary>
+        </member>
+        <member name="M:DotNetZen.CodeDom.ReflectionUtilities.GetFlagsValueExpression(System.Int32,System.Type)">
+            <summary>
+            Gets the value of a flags enum value as a list of enum values.
+            </summary>
+            <param name="value">The value of the enum instance.</param>
+            <param name="enumType">The type of the enum.</param>
+            <returns>An expression holding a list of enum values.</returns>
+        </member>
+        <member name="M:DotNetZen.CodeDom.ReflectionUtilities.GetFlagsExpressionValue(System.CodeDom.CodeExpression)">
+            <summary>
+            Gets the value of a flags enum value from a list of enum values.
+            </summary>
+            <param name="expr">The expression that is the list of enum values.</param>
+            <returns>The integer value of the enum.</returns>
+            <remarks>This method only supports expressions created with the <see cref="M:DotNetZen.CodeDom.ReflectionUtilities.GetFlagsValueExpression(System.Int32,System.Type)"/> method.</remarks>
+        </member>
+        <member name="T:DotNetZen.CodeDom.CodeTypeDeclarationCollection">
+            <summary>
+            Represents an extended collection of System.CodeDom.CodeTypeDeclaration objects.
+            </summary>
+        </member>
+        <member name="M:DotNetZen.CodeDom.CodeTypeDeclarationCollection.op_Implicit(DotNetZen.CodeDom.CodeTypeDeclarationCollection)~System.CodeDom.CodeTypeMemberCollection">
+            <summary>
+            Implicitly converts the CodeTypeDeclarationCollection to a CodeTypeMemberCollection.
+            </summary>
+            <param name="declarations">The declarations collection.</param>
+            <returns>The members collection.</returns>
+        </member>
+    </members>
+</doc>
